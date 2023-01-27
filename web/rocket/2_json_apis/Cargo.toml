@@ -1,0 +1,9 @@
+[package]
+name = "_2_json_apis"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rocket = {version = "0.5.0-rc.2", features = ["json"]}
+serde = "1.0.152"
+serde_json = "1.0.91"
