@@ -19,6 +19,10 @@ cargo run
 ```
 This will build the project and run the main application.
 
+
+
+> "While you may want to remove rust from your iron, we want you to embrace it in your computer chip 🎊"
+
 ## Contributing
 If you are interested in contributing to this project, please fork the repository and submit a pull request. All contributions are welcome and appreciated.
 
