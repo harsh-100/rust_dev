@@ -1,0 +1,11 @@
+[package]
+name = "gtk-quickstart"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+glib = "0.16.7"
+gtk = { version = "0.5.5", package = "gtk4", features = ["v4_8"] }
+
