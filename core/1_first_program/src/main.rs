@@ -1,5 +1,5 @@
 fn main() {
-    println!("Hello, this is the  world!");
+    println!("Hello world ");
     first_fun()
 }
 
