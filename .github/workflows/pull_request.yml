@@ -1,0 +1,29 @@
+name: Create Pull Request
+
+on:
+  push:
+    branches:
+      - "*"
+
+jobs:
+  create_pull_request:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: ${{ steps.extract_commit_message.outputs.commit_message }}
+          body: |
+            This pull request was automatically created.
+
+          base: main
+          branch: ${{ github.event.ref }}
+
+      - name: Extract commit message
+        id: extract_commit_message
+        run: echo "::set-output name=commit_message::$(git log -1 --pretty=%B | awk '{print $1}')"
